@@ -8,6 +8,7 @@ import BlogForm from '@/components/blogForm/BlogForm';
 // import AllBlogsAdmin from './all-blogs/AllBlogsAdmin';
 
 import { SignOutButton } from '@clerk/nextjs';
+import AllBlogsAdmin from './all-blogs/AllBlogsAdmin';
 
 export default function AdminComponents() {
   const [showForm, setShowForm] = useState('add-software-form');

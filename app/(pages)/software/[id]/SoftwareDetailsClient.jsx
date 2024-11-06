@@ -3,6 +3,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation'; // Updated import for navigation
+import Image from 'next/image';
 
 export default function SoftwareDetailsClient({ software }) {
     const [newReview, setNewReview] = useState({ username: '', rating: '', comment: '' });
@@ -76,7 +77,7 @@ export default function SoftwareDetailsClient({ software }) {
             {/* Software Details */}
             <div className="flex-1 bg-white p-4 shadow-md rounded-md">
                 <h1 className="text-3xl font-bold mb-4">{software.name}</h1>
-                <img src={software.logo} alt={software.name} className="mb-4 w-32 h-32" />
+                <Image src={software.logo} alt={software.name} height={100} width={100} className="mb-4 w-32 h-32" />
                 <p className="text-lg mb-2">Company: {software.company}</p>
                 <p className="text-lg mb-4">{software.description}</p>
                 <div>
