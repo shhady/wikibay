@@ -9,5 +9,6 @@ export default async function HomePageCategories() {
 
     const response = await fetch(`${baseUrl}/api/softwares/top-products-per-category`);
     const topProductsData = await response.json();
+    console.log(topProductsData);
     return <CategoryProductsClient topProductsData={topProductsData} />;
 }

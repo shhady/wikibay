@@ -14,7 +14,7 @@ export default function HomePageCategories({ topProductsData }) {
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
   };
-
+  
   // Filter products based on the selected category
   const products = topProductsData[selectedCategory] || [];
 
@@ -61,7 +61,7 @@ export default function HomePageCategories({ topProductsData }) {
                 </div>
                 <h4 className="text-xl font-bold mb-2">{product.name}</h4>
                 <p className="text-sm mb-2">
-                  Rating: {((product.priceRating + product.easeOfUseRating + product.featuresRating + product.supportRating) / 4).toFixed(1)}
+                  Rating: { ((product.priceRating + product.easeOfUseRating + product.featuresRating + product.supportRating) / 4).toFixed(1)}
                 </p>
                 <p className="text-sm mb-4">{product.description}</p>
                 <div className="w-full flex justify-between items-center">
