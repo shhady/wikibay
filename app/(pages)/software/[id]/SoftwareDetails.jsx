@@ -8,8 +8,9 @@ import Link from 'next/link';
 
 export default async function SoftwareDetails({ id }) {
     try {
+        const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
         // Use the full server URL for fetching data
-        const response = await fetch(`http://localhost:3000/api/softwares/get-software/${id}`);
+        const response = await fetch(`${baseUrl}/api/softwares/get-software/${id}`);
         const software = await response.json();
         console.log(software);
         if (software.error) {
