@@ -4,8 +4,8 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 export default async function Page({ params }) {
-    const { category } = params;
-    console.log(category);
+    const { category } = await params;
+    
 
     // Use an absolute URL for the fetch request
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'; // Use your actual base URL
@@ -17,7 +17,7 @@ export default async function Page({ params }) {
     }
 
     const posts = await response.json();
-    console.log(posts);
+    
 
     return (
         <div>

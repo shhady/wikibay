@@ -131,7 +131,6 @@ useEffect(() => {
     }
    },[formStatus]);
 
-   console.log(formStatus);
   return (
     
     <div className={`p-8  ${hero ? 'text-white':'text-black'} `}>

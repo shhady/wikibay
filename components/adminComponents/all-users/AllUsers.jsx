@@ -7,7 +7,6 @@ function useFetchUsers(page, limit) {
   const [loading, setLoading] = useState(true);
   const [totalPages, setTotalPages] = useState(0);
   const [error, setError] = useState(null);
-  console.log(data);
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);

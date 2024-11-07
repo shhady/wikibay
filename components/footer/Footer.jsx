@@ -4,7 +4,7 @@ import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-teal-800 text-white p-8">
+    <footer className="bg-teal-800 text-white p-8 pb-24 md:pb-8">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Menu Links */}
         <div>

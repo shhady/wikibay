@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 // import { useMediaQuery } from 'react-responsive'
-import { Home, Grid, Phone, UserPlus, User } from 'lucide-react'
+import { Home, Grid, Phone, Info , User } from 'lucide-react'
 // import { useState } from 'react'
 import {
     ClerkProvider,
@@ -76,10 +76,11 @@ export default async function Navbar() {
               <Grid className="h-6 w-6" />
               <span className="text-xs mt-1">Categories</span>
             </Link>
-            <Link href="/contact" className="flex flex-col items-center">
-              <Phone className="h-6 w-6" />
-              <span className="text-xs mt-1">Contact Us</span>
+            <Link href="/about" className="flex flex-col items-center">
+              <Info className="h-6 w-6" />
+              <span className="text-xs mt-1">About us</span>
             </Link>
+
             <Link href="/my-software" className="flex flex-col items-center">
               <User className="h-6 w-6" />
               <span className="text-xs mt-1">My Software</span>

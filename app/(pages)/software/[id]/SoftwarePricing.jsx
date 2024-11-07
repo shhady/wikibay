@@ -2,7 +2,6 @@ import React from 'react'
 import PriceCard from './PriceCard';
 
 export default function SoftwarePricing({plansPricing}) {
-    console.log(plansPricing);
   return (
     <div className='p-10'>
         <h2 className='text-center text-2xl font-bold'>Pricing plans</h2>
