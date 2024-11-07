@@ -7,9 +7,15 @@ export default function Hero() {
   const [query, setQuery] = useState("");
   const router = useRouter();
 
-  const handleKeyPress = (e) => {
-    if (e.key === "Enter" && query.trim()) {
+  const handleSearch = () => {
+    if (query.trim()) {
       router.push(`/search?query=${encodeURIComponent(query)}`);
+    }
+  };
+
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      handleSearch();
     }
   };
 
@@ -21,7 +27,7 @@ export default function Hero() {
       </div>
       <div className="p-12">
         <div className="gap-1 flex justify-center items-center rounded-xl bg-white text-black">
-          <Search className="px-1 m-1" />
+          <Search className="px-1 m-1 cursor-pointer" onClick={handleSearch} />
           <input
             type="text"
             placeholder="Search software, categories ..."
