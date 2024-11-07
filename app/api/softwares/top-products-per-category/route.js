@@ -16,7 +16,7 @@ export async function GET() {
             Software.find({ category })
                 .sort({ overallRating: -1 }) // Sort by rating, assuming higher rating is better
                 .limit(3) // Only get the top 3 products
-                .select('name description logo overallRating') // Fetch only minimal fields
+                .select('name description logo priceRating easeOfUseRating featuresRating supportRating') // Fetch only minimal fields
                 .lean() // Improve performance by not attaching Mongoose document methods
         );
 

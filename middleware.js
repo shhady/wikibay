@@ -1,45 +1,32 @@
-import {
-  clerkMiddleware,
-  createRouteMatcher,
-  clerkClient
-} from '@clerk/nextjs/server';
+// middleware.js
+
+import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
 import { NextResponse } from 'next/server';
 
-// Create a matcher for protected routes
-const isProtectedRoute = createRouteMatcher([
-  '/admin(.*)',
-]);
+const isAdminRoute = createRouteMatcher(['/admin(.*)']);
 
-export default clerkMiddleware(async ({ userId }, req) => {
-  console.log('Middleware triggered for URL:', req.url);
+export default clerkMiddleware(async (auth, req) => {
+  // Protect all routes that start with `/admin`
+  if (isAdminRoute(req)) {
+    // Retrieve the session claims, including publicMetadata
+    const { sessionClaims } = await auth();
 
-  if (isProtectedRoute(req)) {
-    console.log('Protected route detected:', req.url);
-
-    if (!userId) {
-      console.log('User not authenticated, redirecting to sign-in.');
-      return NextResponse.redirect(new URL('/sign-in', req.url));
-    }
-
-    const users = await clerkClient.users.getUserList();
-    const userRole = users.find((user) => user.id === userId)?.publicMetadata?.role;
-
-    if (userRole !== 'admin') {
+    // Check if the user has the `admin` role in publicMetadata
+    const role = sessionClaims?.metadata?.role;
+    if (role !== 'admin') {
       console.log('User is not an admin, redirecting to home.');
-      return NextResponse.redirect(new URL('/', req.url));
+      const url = new URL('/', req.url);
+      return NextResponse.redirect(url);
     }
-
-    console.log('User authenticated and authorized, allowing access.');
-    return NextResponse.next();
   }
 
-  // For non-protected routes, allow access
-  console.log('Non-protected route, allowing access.');
+  // Allow the request to proceed if the user is an admin or if the route is not protected
   return NextResponse.next();
 });
 
 export const config = {
   matcher: [
-    '/((?!_next/static|_next/image|favicon.ico).*)', // Matches all pages except _next resources
+    '/((?!_next|[^?]*\\.(?:html?|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)',
+    '/(api|trpc)(.*)',
   ],
 };

@@ -4,7 +4,6 @@ import { NextResponse } from 'next/server';
 
 export async function GET(request, { params }) {
     const { category } = await params;
-    console.log("Requested category:", category); // Log the category to check
 
     try {
         await connectToDB();

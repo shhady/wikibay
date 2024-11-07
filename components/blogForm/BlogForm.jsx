@@ -57,10 +57,10 @@ const BlogForm = ({setShowForm}) => {
       {error && <p style={{ color: 'red' }}>{error}</p>}
       {success && <p style={{ color: 'green' }}>{success}</p>}
       <form onSubmit={handleSubmit} className='w-full max-w-screen-lg p-8 gap-8'>
-        <h1 className='text-2xl font-bold mb-8'>اكتب مقالة</h1>
+        <h1 className='text-2xl font-bold mb-8'>Add Blog</h1>
         <div className='lg:flex gap-4'>
-        <div className="w-full max-w-screen-lg mb-4 text-right">
-          <label htmlFor="title text-white">العنوان</label>
+        <div className="w-full max-w-screen-lg mb-4 ">
+          <label htmlFor="title text-white">Title</label>
           <input
           className="form-control mt-2 block w-full rounded-md border-b-2 border-black shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 text-black p-2 bg-gray-200"
             type="text"
@@ -70,8 +70,8 @@ const BlogForm = ({setShowForm}) => {
             required
           />
         </div>
-        <div className="w-full max-w-screen-lg mb-4 text-right">
-          <label htmlFor="author text-white">الكاتب</label>
+        <div className="w-full max-w-screen-lg mb-4 ">
+          <label htmlFor="author text-white">Author</label>
           <input
           className="form-control mt-2 block w-full rounded-md border-b-2 border-black shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 text-black p-2 bg-gray-200"
             type="text"
@@ -82,8 +82,8 @@ const BlogForm = ({setShowForm}) => {
           />
         </div>
         </div>
-        <div className="w-full mb-3 text-right">
-          <label htmlFor="content text-white">المحتوى</label>
+        <div className="w-full mb-3">
+          <label htmlFor="content text-white">Content</label>
           {/* <textarea
           className="form-control mt-4 block w-full rounded-md border-b-2 border-black shadow-sm focus:border-indigo-300 h-24 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 text-black p-2 bg-gray-200"
             id="content"

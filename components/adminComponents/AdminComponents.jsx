@@ -9,6 +9,7 @@ import BlogForm from '@/components/blogForm/BlogForm';
 
 import { SignOutButton } from '@clerk/nextjs';
 import AllBlogsAdmin from './all-blogs/AllBlogsAdmin';
+import AllSoftwares from './all-softwares/AllSoftwares';
 
 export default function AdminComponents() {
   const [showForm, setShowForm] = useState('add-software-form');
@@ -94,7 +95,7 @@ export default function AdminComponents() {
       <div className="flex-1 bg-gray-800 transition-all duration-300">
         {showForm === 'add-software-form' && <AddSoftware />}
         {showForm === 'add-blog-form' && <BlogForm setShowForm={setShowForm} />}
-        {/* {showForm === 'All-softwares' && <AllSoftwares />} */}
+        {showForm === 'All-softwares' && <AllSoftwares />}
         {showForm === 'All-blogs' && <AllBlogsAdmin />}
         {/* {showForm === 'All-users' && <AllUsers />} */}
       </div>

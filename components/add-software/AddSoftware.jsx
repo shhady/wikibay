@@ -65,14 +65,14 @@ export default function AddSoftware() {
               pros: formData.pros.split(',').map((item) => item.trim()),
               cons: formData.cons.split(',').map((item) => item.trim()),
           },
-          generalFeatures: formData.generalFeatures.split(',').map((item) => item.trim()),
+          generalFeatures: formData.generalFeatures,
           plansPricing: formData.plansPricing.map((plan) => ({
               ...plan,
               featuresIncluded: plan.featuresIncluded.split(',').map((item) => item.trim()),
           })),
           // Formatting featuresFunctionality according to the schema
           featuresFunctionality: {
-              generalFeatures: formData.generalFeatures.split(',').map((item) => item.trim()),
+              generalFeatures: formData.generalFeatures,
               FeaturesDescription: formData.featuresFunctionality.map((feature) => ({
                   title: feature.title,
                   description: feature.description,
@@ -310,7 +310,7 @@ export default function AddSoftware() {
                     />
                 </div>
                 <div>
-                    <label className="block mb-2 text-sm font-medium">General Features (comma separated)</label>
+                    <label className="block mb-2 text-sm font-medium">General Features</label>
                     <textarea
                         name="generalFeatures"
                         value={formData.generalFeatures}
