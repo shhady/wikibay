@@ -33,7 +33,7 @@ export default function SearchResults() {
 
   return (
     <div className="p-8">
-      <h1 className="text-2xl font-bold mb-4">Search Results for "{query}"</h1>
+      <h1 className="text-2xl font-bold mb-4">Search Results for &quot;{query}&quot;</h1>
       {loading ? (
         <p>Loading...</p>
       ) : noResults ? (

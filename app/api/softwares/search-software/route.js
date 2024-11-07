@@ -51,7 +51,7 @@ export default function SoftwareSearch() {
       {loading && <p className="text-center mt-4">Loading...</p>}
       {error && <p className="text-center text-red-500 mt-4">{error}</p>}
       {!loading && !error && results.length === 0 && query.length > 1 && (
-        <p className="text-center text-gray-500 mt-4">No software found for "{query}".</p>
+        <p className="text-center text-gray-500 mt-4">No software found for &quot;{query}&quot;.</p>
       )}
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">

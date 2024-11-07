@@ -43,7 +43,7 @@ export default function AboutPage() {
           <FaUsers className="text-teal-500 text-5xl mx-auto mb-4" />
           <h3 className="text-xl font-semibold mb-2">Community-Focused</h3>
           <p className="text-gray-600">
-            We prioritize our users' needs, actively listening to feedback to continuously enhance our services and user experience.
+            We prioritize our user&lsquo;s needs, actively listening to feedback to continuously enhance our services and user experience.
           </p>
         </div>
       </div>
