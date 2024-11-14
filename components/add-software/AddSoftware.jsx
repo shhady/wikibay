@@ -155,6 +155,7 @@ export default function AddSoftware() {
                         value={formData.affiliateUrl}
                         onChange={handleChange}
                         className="w-full p-2 border border-gray-300 rounded-md"
+                        
                     />
                 </div>
                 <div>
@@ -164,6 +165,7 @@ export default function AddSoftware() {
                         value={formData.description}
                         onChange={handleChange}
                         className="w-full p-2 border border-gray-300 rounded-md"
+                        required
                     />
                 </div>
                 <div>
@@ -174,6 +176,7 @@ export default function AddSoftware() {
                         value={formData.logo}
                         onChange={handleChange}
                         className="w-full p-2 border border-gray-300 rounded-md"
+                        required
                     />
                 </div>
                 {/* Ratings */}
@@ -188,6 +191,7 @@ export default function AddSoftware() {
                         max="5"
                         step="0.1"
                         className="w-full p-2 border border-gray-300 rounded-md"
+                        
                     />
                 </div>
                 <div>

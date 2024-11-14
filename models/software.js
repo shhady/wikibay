@@ -16,7 +16,7 @@ const SoftwareSchema = new mongoose.Schema({
     affiliateUrl: { type: String },
     description: { type: String },
     logo: { type: String },
-    overallRating: { type: Number, min: 0, max: 5 },
+    overallRating: { type: Number, min: 0, max: 5 }, // overall users rating
     priceRating: { type: Number, min: 0, max: 5 },
     easeOfUseRating: { type: Number, min: 0, max: 5 },
     featuresRating: { type: Number, min: 0, max: 5 },
@@ -42,7 +42,8 @@ const SoftwareSchema = new mongoose.Schema({
     },
     easeOfUse: { type: String },
     verdict: { type: String },
-    promotions: { type: String }
+    promotions: { type: String },
+    readyToPublish: { type: Boolean },
 }, { timestamps: true });
 
 const Software = mongoose.models?.Software || mongoose.model('Software', SoftwareSchema);

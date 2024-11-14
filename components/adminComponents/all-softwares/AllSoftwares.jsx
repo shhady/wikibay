@@ -42,7 +42,8 @@ export default function AllSoftwares() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {softwares.map((software) => (
           <div key={software._id} className="p-4 border rounded-lg flex flex-col justify-between items-center">
-            <Image src={software.logo} width={100} height={100} alt={software.name}/>
+            {software.logo &&
+            <Image src={software.logo} width={100} height={100} alt={software.name}/>}
             <h2 className="text-xl font-semibold">{software.name}</h2>
             <p>{software.description}</p>
             <div className="mt-4 flex justify-between items-center gap-2">

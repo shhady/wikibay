@@ -18,7 +18,7 @@ export default function Navbar() {
           <Link href="/" className="flex items-center text-3xl font-bold">
             <Image src="/logo-transparent.png" height={100} width={50} alt="logo" />
             <span className="text-2xl font-bold bg-gradient-to-r from-teal-800 via-green-800 to-green-700 bg-clip-text text-transparent">
-              WikiBay
+              WikiBay.io
             </span>
           </Link>
 

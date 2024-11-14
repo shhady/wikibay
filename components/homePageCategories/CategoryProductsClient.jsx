@@ -40,7 +40,7 @@ export default function HomePageCategories({ topProductsData }) {
       </div>
       {products.length === 0 ? (
         <div className="h-[361px] text-center text-gray-500">
-          There is no data for this category.
+          New softwares comming soon!
         </div>
       ) : (
         <div className="mb-8">

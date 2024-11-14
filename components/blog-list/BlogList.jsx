@@ -10,7 +10,7 @@ export default  function BlogList({data}) {
        مقالات
           <span className="block border-b-2 border-white w-full absolute bottom-0 left-0"></span>
         </h1>
-        {data.length === 0 && <h1>لا يوجد مقالات حتى الان</h1>} 
+        {data.length === 0 && <h1>No Blogs created</h1>} 
         <div className='blog-list w-full'>
           {data.map((blog) => (
             <Link href={`/blog/${blog._id}`} key={blog._id}>

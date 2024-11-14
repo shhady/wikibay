@@ -82,9 +82,9 @@ export default function AdminComponents() {
           <div className="flex gap-2 items-center p-2 text-base font-semibold hover:bg-gray-700 rounded-md" onClick={(e) => handleClickIcon(e, 'All-blogs')}>
             <FileText className="w-6 h-6" /> <span className={`${isSidebarOpen ? 'block' : 'hidden'} lg:block ml-2`}>All Blogs</span>
           </div>
-          <div className="flex gap-2 items-center p-2 text-base font-semibold hover:bg-gray-700 rounded-md" onClick={(e) => handleClickIcon(e, 'All-users')}>
+          {/* <div className="flex gap-2 items-center p-2 text-base font-semibold hover:bg-gray-700 rounded-md" onClick={(e) => handleClickIcon(e, 'All-users')}>
             <Users className="w-6 h-6" /> <span className={`${isSidebarOpen ? 'block' : 'hidden'} lg:block ml-2`}>All Users</span>
-          </div>
+          </div> */}
           <div className="flex gap-2 items-center p-2 text-base font-semibold hover:bg-gray-700 rounded-md">
             <LogOut className="w-6 h-6" /> <SignOutButton className={`${isSidebarOpen ? 'block' : 'hidden'} lg:block ml-2`}>Sign Out</SignOutButton>
           </div>
