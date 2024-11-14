@@ -191,7 +191,7 @@ export default function AddSoftware() {
                         max="5"
                         step="0.1"
                         className="w-full p-2 border border-gray-300 rounded-md"
-                        
+                        required
                     />
                 </div>
                 <div>
@@ -205,6 +205,7 @@ export default function AddSoftware() {
                         max="5"
                         step="0.1"
                         className="w-full p-2 border border-gray-300 rounded-md"
+                        required
                     />
                 </div>
                 <div>
@@ -218,6 +219,7 @@ export default function AddSoftware() {
                         max="5"
                         step="0.1"
                         className="w-full p-2 border border-gray-300 rounded-md"
+                        required
                     />
                 </div>
                 <div>
@@ -231,6 +233,7 @@ export default function AddSoftware() {
                         max="5"
                         step="0.1"
                         className="w-full p-2 border border-gray-300 rounded-md"
+                        required
                     />
                 </div>
                 {/* Plans Pricing */}
@@ -244,6 +247,7 @@ export default function AddSoftware() {
                                 value={plan.planName}
                                 onChange={(e) => handleArrayChange(e, index, 'planName', 'plansPricing')}
                                 className="w-full mb-2 p-2 border border-gray-300 rounded-md"
+                                required
                             />
                             <input
                                 type="text"
@@ -251,6 +255,7 @@ export default function AddSoftware() {
                                 value={plan.price}
                                 onChange={(e) => handleArrayChange(e, index, 'price', 'plansPricing')}
                                 className="w-full mb-2 p-2 border border-gray-300 rounded-md"
+                                required
                             />
                             <input
                                 type="text"
@@ -258,12 +263,14 @@ export default function AddSoftware() {
                                 value={plan.additionalInfo}
                                 onChange={(e) => handleArrayChange(e, index, 'additionalInfo', 'plansPricing')}
                                 className="w-full mb-2 p-2 border border-gray-300 rounded-md"
+                                required
                             />
                             <textarea
                                 placeholder="Features Included (comma separated)"
                                 value={plan.featuresIncluded}
                                 onChange={(e) => handleArrayChange(e, index, 'featuresIncluded', 'plansPricing')}
                                 className="w-full mb-2 p-2 border border-gray-300 rounded-md"
+                                required
                             />
                         </div>
                     ))}
@@ -283,6 +290,7 @@ export default function AddSoftware() {
                         value={formData.expertReviewSummary}
                         onChange={handleChange}
                         className="w-full p-2 border border-gray-300 rounded-md"
+                        required
                     />
                 </div>
                 <div>
@@ -292,6 +300,7 @@ export default function AddSoftware() {
                         value={formData.pros}
                         onChange={handleChange}
                         className="w-full p-2 border border-gray-300 rounded-md"
+                        required
                     />
                 </div>
                 <div>
@@ -301,6 +310,7 @@ export default function AddSoftware() {
                         value={formData.cons}
                         onChange={handleChange}
                         className="w-full p-2 border border-gray-300 rounded-md"
+                        required
                     />
                 </div>
                 <div>
@@ -311,6 +321,7 @@ export default function AddSoftware() {
                         value={formData.customerSupport}
                         onChange={handleChange}
                         className="w-full p-2 border border-gray-300 rounded-md"
+                        required
                     />
                 </div>
                 <div>
@@ -320,6 +331,7 @@ export default function AddSoftware() {
                         value={formData.generalFeatures}
                         onChange={handleChange}
                         className="w-full p-2 border border-gray-300 rounded-md"
+                        required
                     />
                 </div>
                 {/* Features Functionality */}
@@ -333,12 +345,14 @@ export default function AddSoftware() {
                                 value={feature.title}
                                 onChange={(e) => handleArrayChange(e, index, 'title', 'featuresFunctionality')}
                                 className="w-full mb-2 p-2 border border-gray-300 rounded-md"
+                                required
                             />
                             <textarea
                                 placeholder="Feature Description"
                                 value={feature.description}
                                 onChange={(e) => handleArrayChange(e, index, 'description', 'featuresFunctionality')}
                                 className="w-full mb-2 p-2 border border-gray-300 rounded-md"
+                                required
                             />
                         </div>
                     ))}
@@ -357,6 +371,7 @@ export default function AddSoftware() {
                         value={formData.easeOfUse}
                         onChange={handleChange}
                         className="w-full p-2 border border-gray-300 rounded-md"
+                        required
                     />
                 </div>
                 <div>
@@ -366,6 +381,7 @@ export default function AddSoftware() {
                         value={formData.verdict}
                         onChange={handleChange}
                         className="w-full p-2 border border-gray-300 rounded-md"
+                        required
                     />
                 </div>
                 <div>
@@ -375,6 +391,7 @@ export default function AddSoftware() {
                         value={formData.promotions}
                         onChange={handleChange}
                         className="w-full p-2 border border-gray-300 rounded-md"
+                        required
                     />
                 </div>
                 <button type="submit" className="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700">
